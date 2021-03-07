@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.GradeViewController">
+   <children>
+      <AnchorPane prefHeight="110.0" prefWidth="600.0" style="-fx-background-color: #005b4f;">
+         <children>
+            <Label alignment="CENTER" layoutX="181.0" layoutY="28.0" text="Grade Tracker" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btnReturn" fitHeight="40.0" fitWidth="40.0" layoutX="548.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/baseline_clear_black_48dp.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="220.0" layoutY="140.0" text="Current Grade">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="69.0" layoutY="200.0" prefHeight="330.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="myName" editable="false" prefWidth="110.0" text="Assignment" />
+          <TableColumn fx:id="type" editable="false" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="myScore" editable="false" prefWidth="57.0" text="My Score" />
+            <TableColumn fx:id="total" editable="false" prefWidth="57.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="405.0" layoutY="200.0" text="Percent:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="236.0" text="Letter:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPercent" layoutX="507.0" layoutY="200.0" text="100">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLetter" layoutX="507.0" layoutY="236.0" text="A">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="btnAddAssignment" fitHeight="40.0" fitWidth="40.0" layoutX="455.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/baseline_add_circle_white_48dp.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="405.0" layoutY="437.0" text="Add Assignment">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

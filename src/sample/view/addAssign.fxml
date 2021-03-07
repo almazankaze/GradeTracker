@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.AddAssignmentController">
+   <children>
+      <AnchorPane prefHeight="110.0" prefWidth="600.0" style="-fx-background-color: #005b4f;">
+         <children>
+            <Label alignment="CENTER" layoutX="181.0" layoutY="28.0" text="Grade Tracker" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btnReturn" fitHeight="40.0" fitWidth="40.0" layoutX="548.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/baseline_clear_black_48dp.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="100.0" layoutY="210.0" text="Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="100.0" layoutY="260.0" text="Score">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="233.0" layoutY="140.0" text="Assignment">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fieldName" layoutX="199.0" layoutY="211.0" prefHeight="26.0" prefWidth="210.0" />
+      <TextField fx:id="fieldScore" layoutX="199.0" layoutY="261.0" prefHeight="26.0" prefWidth="47.0" />
+      <Button fx:id="btnSubmit" alignment="CENTER" layoutX="260.0" layoutY="458.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #00897b;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="256.0" layoutY="260.0" text="/">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fieldTotal" layoutX="270.0" layoutY="262.0" prefHeight="26.0" prefWidth="47.0" />
+      <RadioButton fx:id="radioHW" layoutX="100.0" layoutY="347.0" mnemonicParsing="false" selected="true" text="Homework">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioT" layoutX="200.0" layoutY="347.0" mnemonicParsing="false" text="Test" toggleGroup="$type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radioProj" layoutX="256.0" layoutY="347.0" mnemonicParsing="false" text="Project" toggleGroup="$type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radioPart" layoutX="329.0" layoutY="347.0" mnemonicParsing="false" text="Participation" toggleGroup="$type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radioF" layoutX="438.0" layoutY="347.0" mnemonicParsing="false" text="Final" toggleGroup="$type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radioO1" layoutX="101.0" layoutY="386.0" mnemonicParsing="false" text="Other 1" toggleGroup="$type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radioO2" layoutX="181.0" layoutY="386.0" mnemonicParsing="false" text="Other 2" toggleGroup="$type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>
